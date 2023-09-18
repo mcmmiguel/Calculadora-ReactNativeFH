@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native';
 import React from 'react';
+import { styles } from '../theme/appTheme';
 
 const CalculadoraScreen = () => {
     return (
         <View>
-            <Text>Hola mundo Calculadora</Text>
+            <Text style={styles.text}>Hola mundo Calculadora</Text>
         </View>
     );
 };
