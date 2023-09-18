@@ -13,7 +13,35 @@ const CalculadoraScreen = () => {
     };
 
     const buildNumber = (textNumber: string) => {
-        setNumber(number + textNumber);
+
+        // No aceptar doble punto
+        if (number.includes('.') && textNumber === '.') { return; }
+
+        if (number.startsWith('0') || number.startsWith('-0')) {
+
+            // Punto decimal
+            if (textNumber === '.') {
+                setNumber(number + textNumber);
+
+                // Evaluar si es otro cero y hay un punto
+            } else if (textNumber === '0' && number.includes('.')) {
+                setNumber(number + textNumber);
+                // Evaluar si es diferente de cero y no tiene un punto
+            } else if (textNumber !== '0' && !number.includes('.')) {
+                setNumber(textNumber);
+                // Evitar el 00000.0
+            } else if (textNumber === '0' && !number.includes('.')) {
+                setNumber(number);
+            } else {
+                setNumber(number + textNumber);
+            }
+
+
+        } else {
+            setNumber(number + textNumber); //Concatenar el valor del número más la entrada del nuevo número
+        }
+
+
     };
 
     const positiveNegative = () => {
