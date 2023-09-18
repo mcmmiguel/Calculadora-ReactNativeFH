@@ -9,10 +9,24 @@ const CalculadoraScreen = () => {
             <Text style={styles.result}>1,500.00</Text>
 
 
-            <View style={styles.button}>
+            <View style={styles.row}>
+
                 {/* Boton */}
-                <Text style={styles.buttonText}>1</Text>
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>1</Text>
+                </View>
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>1</Text>
+                </View>
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>1</Text>
+                </View>
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>1</Text>
+                </View>
             </View>
+
+
         </View>
     );
 };

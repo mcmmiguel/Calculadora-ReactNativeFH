@@ -20,6 +20,12 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         textAlign: 'right',
     },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginBottom: 18,
+        paddingHorizontal: 10,
+    },
     button: {
         width: 80,
         height: 80,
@@ -32,6 +38,6 @@ export const styles = StyleSheet.create({
         padding: 10,
         fontSize: 30,
         color: 'black',
-        fontWeight: '300',
+        fontWeight: '600',
     },
 });
