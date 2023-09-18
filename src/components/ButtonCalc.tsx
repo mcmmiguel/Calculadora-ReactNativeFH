@@ -9,12 +9,12 @@ const backgroundStyle: { [key in ButtonColors]: string } = {
     darkGray: '#2D2D2D',
 };
 
-const ButtonCalc = ({ text, color = 'darkGray', width = false }: ButtonProps) => {
+const ButtonCalc = ({ text, color = 'darkGray', width = false, action }: ButtonProps) => {
 
     const colorText = color === 'lightGrey' ? 'black' : 'white';
     const widthButton = width ? 180 : 80;
     return (
-        <TouchableOpacity >
+        <TouchableOpacity onPress={() => action(text)}>
             <View style={{
                 ...styles.button,
                 width: widthButton,
