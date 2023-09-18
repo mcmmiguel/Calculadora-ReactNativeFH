@@ -11,12 +11,42 @@ const CalculadoraScreen = () => {
 
 
             <View style={styles.row}>
-
-                {/* Boton */}
-                <ButtonCalc text="C" />
-                <ButtonCalc text="+/-" />
-                <ButtonCalc text="del" />
+                {/* Fila de botones */}
+                <ButtonCalc text="C" color="lightGrey" />
+                <ButtonCalc text="+/-" color="lightGrey" />
+                <ButtonCalc text="del" color="lightGrey" />
                 <ButtonCalc text="÷" color="yellow" />
+            </View>
+
+            <View style={styles.row}>
+                {/* Fila de botones */}
+                <ButtonCalc text="7" />
+                <ButtonCalc text="8" />
+                <ButtonCalc text="9" />
+                <ButtonCalc text="x" color="yellow" />
+            </View>
+
+            <View style={styles.row}>
+                {/* Fila de botones */}
+                <ButtonCalc text="4" />
+                <ButtonCalc text="5" />
+                <ButtonCalc text="6" />
+                <ButtonCalc text="-" color="yellow" />
+            </View>
+
+            <View style={styles.row}>
+                {/* Fila de botones */}
+                <ButtonCalc text="1" />
+                <ButtonCalc text="2" />
+                <ButtonCalc text="3" />
+                <ButtonCalc text="+" color="yellow" />
+            </View>
+
+            <View style={styles.row}>
+                {/* Fila de botones */}
+                <ButtonCalc text="0" width />
+                <ButtonCalc text="." />
+                <ButtonCalc text="=" color="yellow" />
             </View>
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { ButtonColors, ButtonProps } from '../interfaces/interfaces';
 
@@ -9,23 +9,26 @@ const backgroundStyle: { [key in ButtonColors]: string } = {
     darkGray: '#2D2D2D',
 };
 
-
-const ButtonCalc = ({ text, color = 'darkGray' }: ButtonProps) => {
+const ButtonCalc = ({ text, color = 'darkGray', width = false }: ButtonProps) => {
 
     const colorText = color === 'lightGrey' ? 'black' : 'white';
-
+    const widthButton = width ? 180 : 80;
     return (
-        <View style={{
-            ...styles.button,
-            backgroundColor: backgroundStyle[color],
-        }}>
-            <Text style={{
-                ...styles.buttonText,
-                color: colorText,
+        <TouchableOpacity >
+            <View style={{
+                ...styles.button,
+                width: widthButton,
+                backgroundColor: backgroundStyle[color],
+
             }}>
-                {text}
-            </Text>
-        </View>
+                <Text style={{
+                    ...styles.buttonText,
+                    color: colorText,
+                }}>
+                    {text}
+                </Text>
+            </View>
+        </TouchableOpacity>
     );
 };
 
