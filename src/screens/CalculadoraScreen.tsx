@@ -16,6 +16,14 @@ const CalculadoraScreen = () => {
         setNumber(number + textNumber);
     };
 
+    const positiveNegative = () => {
+        if (number.includes('-')) {
+            setNumber(number.replace('-', ''));
+        } else {
+            setNumber('-' + number);
+        }
+    };
+
     return (
         <View style={styles.calculatorContainer}>
             <Text style={styles.smallResult}>{beforeNumber}</Text>
