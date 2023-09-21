@@ -5,11 +5,12 @@ import ButtonCalc from '../components/ButtonCalc';
 
 const CalculadoraScreen = () => {
 
-    const [beforeNumber, setBeforeNumber] = useState('100');
-    const [number, setNumber] = useState('100');
+    const [beforeNumber, setBeforeNumber] = useState('0');
+    const [number, setNumber] = useState('0');
 
     const clean = () => {
         setNumber('0');
+        setBeforeNumber('0');
     };
 
     const buildNumber = (textNumber: string) => {
@@ -48,7 +49,7 @@ const CalculadoraScreen = () => {
             setNumber('0');
         } else if (number.length > 1) {
             setNumber(number.slice(0, -1));
-        } else if (!number.startsWith('0')) {
+        } else {
             setNumber('0');
         }
     };
