@@ -97,6 +97,34 @@ const CalculadoraScreen = () => {
         lastOperation.current = Operators.add;
     };
 
+    const calculate = () => {
+        const num1 = Number(number);
+        const num2 = Number(beforeNumber);
+
+        switch (lastOperation.current) {
+            case Operators.add:
+                setNumber(`${num1 + num2}`);
+                break;
+
+            case Operators.substract:
+                setNumber(`${num2 - num1}`);
+                break;
+
+            case Operators.multiply:
+                setNumber(`${num1 * num2}`);
+                break;
+
+            case Operators.divide:
+                setNumber(`${num2 / num1}`);
+                break;
+
+            default:
+                break;
+        }
+
+        setBeforeNumber('0');
+    };
+
     return (
         <View style={styles.calculatorContainer}>
             {
@@ -147,7 +175,7 @@ const CalculadoraScreen = () => {
                 {/* Fila de botones */}
                 <ButtonCalc text="0" width action={buildNumber} />
                 <ButtonCalc text="." action={buildNumber} />
-                <ButtonCalc text="=" color="yellow" action={clean} />
+                <ButtonCalc text="=" color="yellow" action={calculate} />
             </View>
 
         </View>
