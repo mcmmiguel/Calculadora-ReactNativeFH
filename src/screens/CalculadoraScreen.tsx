@@ -44,11 +44,10 @@ const CalculadoraScreen = () => {
     };
 
     const deleteNumber = () => {
-        if (number.startsWith('-') && number.length < 3) {
+        if (number.startsWith('-') && number.length === 2) {
             setNumber('0');
-        }
-        else if (number !== '0' && number.length > 1) {
-            setNumber(number.slice(0, number.length - 1));
+        } else if (number.length > 1) {
+            setNumber(number.slice(0, -1));
         } else if (!number.startsWith('0')) {
             setNumber('0');
         }
