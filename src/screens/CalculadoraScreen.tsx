@@ -41,7 +41,17 @@ const CalculadoraScreen = () => {
             setNumber(number + textNumber); //Concatenar el valor del número más la entrada del nuevo número
         }
 
+    };
 
+    const deleteNumber = () => {
+        if (number.startsWith('-') && number.length < 3) {
+            setNumber('0');
+        }
+        else if (number !== '0' && number.length > 1) {
+            setNumber(number.slice(0, number.length - 1));
+        } else if (!number.startsWith('0')) {
+            setNumber('0');
+        }
     };
 
     const positiveNegative = () => {
@@ -67,8 +77,8 @@ const CalculadoraScreen = () => {
             <View style={styles.row}>
                 {/* Fila de botones */}
                 <ButtonCalc text="C" color="lightGrey" action={clean} />
-                <ButtonCalc text="+/-" color="lightGrey" action={clean} />
-                <ButtonCalc text="del" color="lightGrey" action={clean} />
+                <ButtonCalc text="+/-" color="lightGrey" action={positiveNegative} />
+                <ButtonCalc text="del" color="lightGrey" action={deleteNumber} />
                 <ButtonCalc text="÷" color="yellow" action={clean} />
             </View>
 
@@ -102,7 +112,6 @@ const CalculadoraScreen = () => {
                 <ButtonCalc text="." action={buildNumber} />
                 <ButtonCalc text="=" color="yellow" action={clean} />
             </View>
-
 
         </View>
     );
