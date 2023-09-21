@@ -4,8 +4,6 @@ import { styles } from '../theme/appTheme';
 import ButtonCalc from '../components/ButtonCalc';
 import useCalculator from '../hooks/useCalculator';
 
-
-
 const CalculadoraScreen = () => {
 
     const {
@@ -34,7 +32,6 @@ const CalculadoraScreen = () => {
             >
                 {number}
             </Text>
-
 
             <View style={styles.row}>
                 {/* Fila de botones */}

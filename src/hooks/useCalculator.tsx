@@ -39,7 +39,6 @@ const useCalculator = () => {
                 setNumber(number + textNumber);
             }
 
-
         } else {
             setNumber(number + textNumber); //Concatenar el valor del número más la entrada del nuevo número
         }
