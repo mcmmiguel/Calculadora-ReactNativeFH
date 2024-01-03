@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.calculadora"
+    namespace "com.mcmmiguel.calculadorarn"
     defaultConfig {
-        applicationId "com.calculadora"
+        applicationId "com.mcmmiguel.calculadorarn"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
